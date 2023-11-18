@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image.png"  type="image/x-icon">
+    <title>Online-PYQ's</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#logo" style="text-decoration: none;"><li id="home" >HOME</li></a>
+            <a href="#contact2" style="text-decoration: none;"><li id="services" >SERVICES</li></a>
+            <a href="#contact1"style="text-decoration: none;"><li id="contact" >CONTACT</li></a>
+        </div>
+    </nav>
+    <img id="logo" src="logo-removebg-preview.png" alt="uemlogo">
+    <p id="about">About Us</p>
+    <pre id="para">Welcome to our comprehensive collection of Previous Year Questions (PYQ) for University of Engineering
+and Management (CSIT Deaprtment).Unlock the key to exam success with our curated database of past exam
+papers, meticulously organized by subject and year. This invaluable resource allows students to familiarize
+themselves with the exam pattern, question types, and topic weightage. Whether you're gearing up for finals
+or striving for academic excellence,our PYQ collection serves as a strategic tool for effective exam preparation.
+Elevate your performance, boost your confidence, and conquer exams with ease. Your academic success story 
+begins here. Explore, practice, and triumph with UEM's PYQ collection.</pre>
+
+ <section class="semesters">
+<p id="contact2">Choose Your Semester</p>
+<div class="first-row">
+<a href="sem1.html" style="text-decoration: none;"><h1 id="s1">SEMESTER I</h1></a>
+<a href="sem2.html" style="text-decoration: none;"><h1 id="s2">SEMESTER II</h1></a>
+<a href="sem3.html" style="text-decoration: none;"><h1 id="s3">SEMESTER III</h1></a>
+<a href="sem4.html" style="text-decoration: none;"><h1 id="s4">SEMESTER IV</h1></a>
+</div>
+<div class="second-row">
+<h1 id="s5">SEMESTER V</h1>
+<h1 id="s6">SEMESTER VI</h1>
+<h1 id="s7"> SEMESTER VII</h1>
+<h1 id="s8">SEMESTER VIII</h1>
+</div>
+
+ </section>
+
+ <p id="contact1">Get in touch</p>
+      <div id="container1">
+        <form method="post" action="" name="contact-form">
+          <input type="text" id="fname" name="fname" placeholder="First Name" >
+          <input type="text" id="lname" name="lname" placeholder="Last Name" >
+          <input type="email" id="email" name="email" placeholder="Email" >
+          <input type="number" id="mobile" name="mobile" placeholder="Mobile" >
+          <h4>Type Your Message Here...</h4>
+          <textarea name="msg"></textarea>
+          <input type="submit" value="Submit" id="submit" name="submit">
+        </form>
+      </div>
+
+      <footer>
+        <div class="footer">
+            <pre id="text0">
+                Thank You for visiting !</pre>
+                 <pre id="text11">
+                A project by</pre>
+                <pre id="text12">Code Developers</pre>
+                <pre id="text13">&#169;Copyright 2023</pre>
+               <pre id="text14">All Rights Reserved. Powered by</pre>
+               <a href="https://www.netlify.com/">
+                <pre id="text15">Netlify.com</pre></a>
+    
+            
+        </div>
+    </footer> 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwMzJX_-4k5Rycw7cijXUTggKNftX_S0EkSBoSK_xgvPekZCKc8CT-G0xF0JooIsKZg/exec'
+
+    const form = document.forms['contact-form']
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thank you! your form is submitted successfully." ))
+      .then(() => { window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
